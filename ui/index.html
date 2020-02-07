@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<title>rui</title>
+
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="app">
+		<i>
+			/<span v-for="segment in pathSegments">{{segment}}</span>
+		</i>
+
+		<p v-on:click="back" v-bind:class="{ grey: loading }">back</p>
+
+		<table>
+			<tbody>
+				<tr v-for="segment in listSegments">
+					<td v-on:click="select(segment)">{{segment}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="index.js"></script>
+</body>
